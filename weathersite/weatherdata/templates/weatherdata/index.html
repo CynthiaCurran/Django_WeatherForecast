@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Search For Zip Forecast</title>
+  </head>
+  <body>
+    <p>Please input a zip code to see forecast.</p>
+
+    <form method="POST" action="{% url 'weather_query' %}">
+        {% csrf_token %}
+        <input type="number" name="zip_code">
+        <button type="submit">Search</button>
+    </form>
+
+  </body>
+</html>
